@@ -1,0 +1,32 @@
+{
+  "name": "jq-playground",
+  "version": "0.0.0",
+  "private": true,
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack build",
+    "start": "webpack serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chris48s/jq-playground.git"
+  },
+  "author": "chris48s",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chris48s/jq-playground/issues"
+  },
+  "homepage": "https://github.com/chris48s/jq-playground#readme",
+  "devDependencies": {
+    "copy-webpack-plugin": "^12.0.2",
+    "curlconverter": "^4.9.0",
+    "jq-web": "^0.5.1",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "water.css": "^2.1.1",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}

@@ -1,0 +1,14 @@
+#json-doc {
+    font-family: monospace;
+    width: 100%;
+}
+
+#jq-query, #curl-command {
+    font-family: monospace;
+    width: calc(100% - 20px);
+}
+
+nav {
+    background: #efefef;
+    padding: 6px;
+}

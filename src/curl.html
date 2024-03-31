@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <link rel="stylesheet" href="css/light.css">
+      <link rel="stylesheet" href="css/styles.css">
+      <script src="js/jq.wasm.js"></script>
+      <link rel="preload" href="js/tree-sitter.wasm" type="application/wasm" as="fetch" crossorigin>
+      <link rel="preload" href="tree-sitter-bash.wasm" type="application/wasm" as="fetch" crossorigin>
+      <title>JQ Playground</title>
+    </head>
+    <body>
+      <header>
+        <h1>JQ Playground</h1>
+        <nav>
+          ≣ <a href="index.html">JQ</a> |
+          <a href="curl.html">Curl + JQ</a>
+        </nav>
+      </header>
+      <main>
+        <h2><label for="curl-command">Curl Command</label></h2>
+        <input
+          name="curl-command"
+          id="curl-command"
+          value="curl -X GET -H &quot;Accept: application/json&quot; &quot;https://api.github.com&quot;"
+        />
+        <button type="button" id="curl-execute">Execute</button>
+        <div id="curl-errors"></div>
+        <h2><label for="json-doc">Response Body</label></h2>
+        <textarea
+          cols="80"
+          rows="15"
+          spellcheck="false"
+          name="json-doc"
+          id="json-doc"
+          readonly
+        >
+        </textarea>
+        <h2><label for="jq-query">JQ Query</label></h2>
+        <input
+          name="jq-query"
+          id="jq-query"
+          value="."
+        />
+
+        <h2>JQ Result</h2>
+        <div id="jq-result"></div>
+      </main>
+
+      <script src="js/app.js"></script>
+    </body>
+  </html>
