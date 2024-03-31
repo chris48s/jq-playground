@@ -6,6 +6,8 @@
       <link rel="stylesheet" href="css/light.css">
       <link rel="stylesheet" href="css/styles.css">
       <script src="js/jq.wasm.js"></script>
+      <link rel="preload" href="js/tree-sitter.wasm" type="application/wasm" as="fetch" crossorigin>
+      <link rel="preload" href="tree-sitter-bash.wasm" type="application/wasm" as="fetch" crossorigin>
       <title>JQ Playground</title>
     </head>
     <body>
@@ -17,27 +19,29 @@
         </nav>
       </header>
       <main>
-        <h2><label for="json-doc">JSON Document</label></h2>
+        <h2><label for="curl-command">Curl Command</label></h2>
+        <input
+          name="curl-command"
+          id="curl-command"
+          value="curl -X GET -H &quot;Accept: application/json&quot; &quot;https://api.github.com&quot;"
+        />
+        <button type="button" id="curl-execute">Execute</button>
+        <div id="curl-errors"></div>
+        <h2><label for="json-doc">Response Body</label></h2>
         <textarea
           cols="80"
           rows="15"
           spellcheck="false"
           name="json-doc"
           id="json-doc"
->
-{
-  "DB": {
-    "host": "127.0.0.1",
-    "port": "1221",
-    "SID": "testDB"
-  }
-}
-</textarea>
+          readonly
+        >
+        </textarea>
         <h2><label for="jq-query">JQ Query</label></h2>
         <input
           name="jq-query"
           id="jq-query"
-          value=".DB.host"
+          value="."
         />
 
         <h2>JQ Result</h2>
