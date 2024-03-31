@@ -25,8 +25,7 @@ module.exports = {
       patterns: [
         // curlconverter
         { from: "node_modules/web-tree-sitter/tree-sitter.wasm", to: "js" },
-        // needs to be in the root :/
-        "node_modules/curlconverter/dist/tree-sitter-bash.wasm",
+        { from: "node_modules/curlconverter/dist/tree-sitter-bash.wasm", to: "js" },
 
         // jq-web
         {

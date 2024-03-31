@@ -1,0 +1,26 @@
+diff --git a/node_modules/curlconverter/dist/src/shell/webParser.js b/node_modules/curlconverter/dist/src/shell/webParser.js
+index 208ee76..e5666d5 100644
+--- a/node_modules/curlconverter/dist/src/shell/webParser.js
++++ b/node_modules/curlconverter/dist/src/shell/webParser.js
+@@ -3,7 +3,7 @@ import Parser from "web-tree-sitter";
+ // NOTE: Top-level await is not available in Safari until Safari 15
+ // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#browser_compatibility
+ await Parser.init();
+-const Bash = await Parser.Language.load("/tree-sitter-bash.wasm");
++const Bash = await Parser.Language.load("js/tree-sitter-bash.wasm");
+ const parser = new Parser();
+ parser.setLanguage(Bash);
+ export default parser;
+diff --git a/node_modules/curlconverter/src/shell/webParser.ts b/node_modules/curlconverter/src/shell/webParser.ts
+index 3401fcf..af80a1e 100644
+--- a/node_modules/curlconverter/src/shell/webParser.ts
++++ b/node_modules/curlconverter/src/shell/webParser.ts
+@@ -5,7 +5,7 @@ import Parser from "web-tree-sitter";
+ // NOTE: Top-level await is not available in Safari until Safari 15
+ // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/await#browser_compatibility
+ await Parser.init();
+-const Bash = await Parser.Language.load("/tree-sitter-bash.wasm");
++const Bash = await Parser.Language.load("js/tree-sitter-bash.wasm");
+ const parser = new Parser();
+ parser.setLanguage(Bash);
+ 
