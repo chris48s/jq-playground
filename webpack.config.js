@@ -30,7 +30,10 @@ module.exports = {
         - https://github.com/chris48s/jq-playground/commit/e082633b8d1384dc82c723d66e8212514c67ce12
         */
         { from: "node_modules/web-tree-sitter/tree-sitter.wasm", to: "js" },
-        { from: "node_modules/curlconverter/dist/tree-sitter-bash.wasm", to: "js" },
+        {
+          from: "node_modules/curlconverter/dist/tree-sitter-bash.wasm",
+          to: "js",
+        },
 
         // jq-web
         {

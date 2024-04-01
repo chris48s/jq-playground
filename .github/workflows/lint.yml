@@ -1,0 +1,23 @@
+name: Lint
+on: [push, pull_request]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install Node JS 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install NPM 10
+        run: npm install -g npm@10
+      - name: Install Packages
+        run: npm ci
+
+      - name: Prettier
+        run: npm run prettier:check
+      - name: ESLint
+        run: npm run lint

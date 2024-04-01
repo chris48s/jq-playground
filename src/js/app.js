@@ -1,6 +1,5 @@
 import * as curlconverter from "curlconverter";
 
-
 // jq
 const jsonDoc = document.getElementById("json-doc");
 const jqQuery = document.getElementById("jq-query");
@@ -21,7 +20,6 @@ function runQuery() {
 jsonDoc.addEventListener("input", runQuery);
 jqQuery.addEventListener("input", runQuery);
 jq.onInitialized.addListener(runQuery);
-
 
 // curl
 const curlExecute = document.getElementById("curl-execute");
