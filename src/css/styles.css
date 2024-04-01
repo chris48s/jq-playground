@@ -1,3 +1,20 @@
+:root {
+    --light-background: #efefef;
+    --dark-background: #161f27;
+}
+
+nav {
+    background: var(--light-background);
+    padding: 6px;
+}
+
+@media (prefers-color-scheme: dark) {
+    nav {
+        background: var(--dark-background);
+    }
+}
+
+
 #json-doc {
     font-family: monospace;
     width: 100%;
@@ -6,9 +23,4 @@
 #jq-query, #curl-command {
     font-family: monospace;
     width: calc(100% - 20px);
-}
-
-nav {
-    background: #efefef;
-    padding: 6px;
 }

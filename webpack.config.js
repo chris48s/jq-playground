@@ -45,7 +45,7 @@ module.exports = {
         },
 
         // water
-        { from: "node_modules/water.css/out/light.css", to: "css" },
+        { from: "node_modules/water.css/out/water.css", to: "css" },
 
         // project files
         { from: "*.html", to: "", context: "src" },
