@@ -1,17 +1,10 @@
 :root {
-    --light-nav-background: #efefef;
-    --dark-nav-background: #161f27;
+    color-scheme: light dark;
 }
 
 nav {
-    background: var(--light-nav-background);
+    background-color: light-dark(#efefef, #161f27);
     padding: 6px;
-}
-
-@media (prefers-color-scheme: dark) {
-    nav {
-        background: var(--dark-nav-background);
-    }
 }
 
 
