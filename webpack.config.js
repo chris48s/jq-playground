@@ -11,6 +11,11 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     clean: true,
   },
+  devServer: {
+    devMiddleware: {
+      publicPath: '/jq-playground/'
+    }
+  },
   resolve: {
     fallback: {
       path: require.resolve("path-browserify"),
@@ -29,10 +34,10 @@ module.exports = {
         - https://github.com/curlconverter/curlconverter/issues/617
         - https://github.com/chris48s/jq-playground/commit/e082633b8d1384dc82c723d66e8212514c67ce12
         */
-        { from: "node_modules/web-tree-sitter/tree-sitter.wasm", to: "" },
+        { from: "node_modules/web-tree-sitter/tree-sitter.wasm", to: "js" },
         {
           from: "node_modules/curlconverter/dist/tree-sitter-bash.wasm",
-          to: "",
+          to: "js",
         },
 
         // jq-web
