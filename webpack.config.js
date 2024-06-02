@@ -13,8 +13,8 @@ module.exports = {
   },
   devServer: {
     devMiddleware: {
-      publicPath: '/jq-playground/'
-    }
+      publicPath: "/jq-playground/",
+    },
   },
   resolve: {
     fallback: {
