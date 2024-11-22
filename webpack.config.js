@@ -42,12 +42,12 @@ module.exports = {
 
         // jq-web
         {
-          from: "jq.wasm.js",
+          from: "jq.js",
           to: "js",
           context: "node_modules/jq-web",
         },
         {
-          from: "jq.wasm.wasm",
+          from: "jq.wasm",
           to: "js",
           context: "node_modules/jq-web",
         },
