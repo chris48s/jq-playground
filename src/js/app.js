@@ -5,21 +5,32 @@ const jsonDoc = document.getElementById("json-doc");
 const jqQuery = document.getElementById("jq-query");
 const jqResult = document.getElementById("jq-result");
 
+function logError(message) {
+  jqResult.innerHTML = "<pre><code>" + message + "</code></pre>";
+}
+
 function runQuery() {
+  let parsedJson;
+
   try {
-    const parsedJson = JSON.parse(jsonDoc.value);
+    parsedJson = JSON.parse(jsonDoc.value);
+  } catch (error) {
+    logError(error.message);
+  }
+
+  jq.then(function (jq) {
     jqResult.innerHTML =
       "<pre><code>" +
       JSON.stringify(jq.json(parsedJson, jqQuery.value), null, 2) +
       "</code></pre>";
-  } catch (error) {
-    jqResult.innerHTML = "<pre><code>" + error.message + "</code></pre>";
-  }
+  }).catch(function (error) {
+    logError(error.message);
+  });
 }
 
 jsonDoc.addEventListener("input", runQuery);
 jqQuery.addEventListener("input", runQuery);
-jq.onInitialized.addListener(runQuery);
+jq.then(runQuery);
 
 // curl
 const curlExecute = document.getElementById("curl-execute");
