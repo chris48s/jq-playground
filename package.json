@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/chris48s/jq-playground#readme",
   "devDependencies": {
-    "copy-webpack-plugin": "^12.0.2",
+    "copy-webpack-plugin": "^13.0.0",
     "curlconverter": "^4.12.0",
     "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
