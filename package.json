@@ -25,7 +25,7 @@
   "devDependencies": {
     "copy-webpack-plugin": "^13.0.0",
     "curlconverter": "^4.12.0",
-    "eslint": "^9.28.0",
+    "eslint": "^9.29.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.1",
     "jq-web": "^0.6.2",
