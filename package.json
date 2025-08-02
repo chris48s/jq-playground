@@ -26,7 +26,7 @@
     "copy-webpack-plugin": "^13.0.0",
     "curlconverter": "^4.12.0",
     "eslint": "^9.32.0",
-    "eslint-config-prettier": "^10.1.5",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-prettier": "^5.5.3",
     "jq-web": "^0.6.2",
     "patch-package": "^8.0.0",
