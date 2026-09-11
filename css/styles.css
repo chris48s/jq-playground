@@ -1,19 +1,2 @@
-:root {
-    color-scheme: light dark;
-}
-
-nav {
-    background-color: light-dark(#efefef, #161f27);
-    padding: 6px;
-}
-
-
-#json-doc {
-    font-family: monospace;
-    width: 100%;
-}
-
-#jq-query, #curl-command {
-    font-family: monospace;
-    width: calc(100% - 20px);
-}
+:root{color-scheme:light dark}nav{background-color:light-dark(#efefef,#161f27);padding:6px}#json-doc{font-family:monospace;width:100%}#curl-command,#jq-query{font-family:monospace;width:calc(100% - 20px)}
+/*# sourceMappingURL=styles.css.map*/
