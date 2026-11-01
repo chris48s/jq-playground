@@ -1,2 +1,2 @@
-:root{color-scheme:light dark}nav{background-color:light-dark(#efefef,#161f27);padding:6px}#json-doc{font-family:monospace;width:100%}#curl-command,#jq-query{font-family:monospace;width:calc(100% - 20px)}
+:root{color-scheme:light dark;--webpack-light:initial;--webpack-dark:}@media (prefers-color-scheme:dark){:root{--webpack-light:;--webpack-dark:initial}}nav{background-color:var(--webpack-light,#efefef) var(--webpack-dark,#161f27);padding:6px}#json-doc{width:100%;font-family:monospace}#curl-command,#jq-query{width:calc(100% - 20px);font-family:monospace}:where(:root){--webpack-light:initial;--webpack-dark:}
 /*# sourceMappingURL=styles.css.map*/
